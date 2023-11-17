@@ -3,6 +3,12 @@ import pandas as pd
 import re
 from bs4 import BeautifulSoup
 
+###################################################
+## This file is to get books from user bookshelf ##
+## bookshelf. Generic book-data from Book_Id     ##
+## is collected in the file get_generic_book.py  ##
+###################################################
+
 def set_url(user_id):
     # Base-urls for the bookshelf to-read and read
     read_books_url = f'https://www.goodreads.com/review/list/{user_id}?&shelf=read'
@@ -11,8 +17,8 @@ def set_url(user_id):
     no_pages_read = get_no_of_pages(read_books_url)
     no_pages_to_read = get_no_of_pages(to_read_books_url)
     # Get book data from user bookshelf
-    books_read = get_new_user_book_info(read_books_url, no_pages_read)
-    books_to_read = get_new_user_book_info(to_read_books_url, no_pages_to_read)
+    books_read = get_user_book_info(read_books_url, no_pages_read)
+    books_to_read = get_user_book_info(to_read_books_url, no_pages_to_read)
     return books_read,books_to_read
 
 def get_no_of_pages(book_url): # Get number of pages needed to paginate through
@@ -27,12 +33,10 @@ def get_no_of_pages(book_url): # Get number of pages needed to paginate through
         number_of_pages = round(number_of_books/30)
     else:
         number_of_pages = 1
-    print('number of pages',number_of_pages) 
-    #print('number of books', number_of_books)
     return number_of_pages # No of pages to paginate
 
-def get_new_user_book_info(book_url, number_of_pages):
-    books = pd.DataFrame(columns=['book_id', 'title', 'author', 'avg_rating', 'user_rating'])
+def get_user_book_info(book_url, number_of_pages):
+    books = pd.DataFrame(columns=['Book_Id', 'Book_Title', 'Author', 'Average_Rating', 'My_Rating'])
     dataframes = []
     for i in range(1,number_of_pages+1):
         book_url_pages = book_url + f'&page={i}' # Create pagination URL
@@ -42,28 +46,28 @@ def get_new_user_book_info(book_url, number_of_pages):
         book_info = []
         for link in book_links:
             info = {
-                'book_id': link['href'].split('/')[-1].split('-')[0].split('.')[0],
-                'title': link.get('title'),
-                'author': link.find_next('td', class_='field author').find('a').text.strip(),
-                'avg_rating': link.find_next('td', class_='field avg_rating').find('div', class_='value').text.strip(),
+                'Book_Id': link['href'].split('/')[-1].split('-')[0].split('.')[0],
+                'Book_Title': link.get('title'),
+                'Author': link.find_next('td', class_='field author').find('a').text.strip(),
+                'Average_Rating': link.find_next('td', class_='field avg_rating').find('div', class_='value').text.strip(),
             }
             # Check if 'user_rating' element is present
             static_stars_element = link.find_next('td', class_='field rating').find('span', class_='staticStars')
             if static_stars_element:
-                info['user_rating'] = static_stars_element.get('title')  # Get the rating text
-            else:
-                info['user_rating'] = None
+                info['My_Rating'] = static_stars_element.get('title')  # Get the rating text if rated
+            else: # If not rated (might me to-read) set None
+                info['My_Rating'] = None
             
             book_info.append(info)
 
         # Create a DataFrame for the current page and add it to the list
-        dataframes.append(pd.DataFrame(book_info, columns=['book_id', 'title', 'author', 'avg_rating', 'user_rating']))
+        dataframes.append(pd.DataFrame(book_info, columns=['Book_Id', 'Book_Title', 'Author', 'Average_Rating', 'My_Rating']))
 
     # Concatenate all DataFrames in the list
     books = pd.concat(dataframes, ignore_index=True)
 
     # Drop rows with None values in the 'title' column becuse of duplicates
-    books = books.dropna(subset=['title'])   
+    books = books.dropna(subset=['Book_Title'])   
     books = books.reset_index(drop=True)
     return books
 
