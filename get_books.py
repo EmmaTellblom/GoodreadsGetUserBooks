@@ -25,8 +25,10 @@ def get_no_of_pages(book_url): # Get number of pages needed to paginate through
             number_of_books = int(match.group(1))
     if number_of_books > 30: # Goodreads display 30 per page
         number_of_pages = round(number_of_books/30)
+    else:
+        number_of_pages = 1
     print('number of pages',number_of_pages) 
-    print('number of books', number_of_books)
+    #print('number of books', number_of_books)
     return number_of_pages # No of pages to paginate
 
 def get_new_user_book_info(book_url, number_of_pages):
