@@ -1,0 +1,159 @@
+;book_id;title;author;avg_rating;user_rating;bookshelf
+0;124943888;A Court of Silver Flames (Part 2 of 2) [Dramatized Adaptation] (A Court of Thorns and Roses, #4);Maas, Sarah J.;4.84;5;read
+1;124943884;A Court of Silver Flames (Part 1 of 2) [Dramatized Adaptation] (A Court of Thorns and Roses, #4);Maas, Sarah J.;4.75;5;read
+2;62845957;A Court of Wings and Ruin (Part 2 of 3) [Dramatized Adaptation] (A Court of Thorns and Roses, #3);Maas, Sarah J.;4.76;5;read
+3;60802408;A Court of Thorns and Roses (Part 2 of 2) [Dramatized Adaptation] (A Court of Thorns and Roses, #1);Maas, Sarah J.;4.66;5;read
+4;60675812;A Court of Thorns and Roses (Part 1 of 2) [Dramatized Adaptation] (A Court of Thorns and Roses, #1);Maas, Sarah J.;4.53;5;read
+5;67771230;A Court of Wings and Ruin (Part 3 of 3) [Dramatized Adaptation] (A Court of Thorns and Roses, #3);Maas, Sarah J.;4.79;5;read
+6;61219508;A Court of Wings and Ruin ( Part 1 of 3) [Dramatized Adaptation] (A Court of Thorns and Roses, #3);Maas, Sarah J.;4.74;5;read
+7;61117474;A Court of Mist and Fury (Part 2 of 2) [Dramatized Adaptation] (A Court of Thorns and Roses #2);Maas, Sarah J.;4.83;5;read
+8;61029196;A Court of Mist and Fury (Part 1 of 2) [Dramatized Adaptation] (A Court of Thorns and Roses, #2);Maas, Sarah J.;4.77;5;read
+9;90202302;Iron Flame (The Empyrean, #2);Yarros, Rebecca;4.54;5;read
+10;61431922;Fourth Wing (The Empyrean, #1);Yarros, Rebecca;4.64;5;read
+11;126062562;The Assassin's Blade (Throne of Glass, #0.1-0.5);Maas, Sarah J.;4.27;3;read
+12;53138095;A ​Court of Silver Flames (A Court of Thorns and Roses, #4);Maas, Sarah J.;4.46;5;read
+13;50659472;A Court of Wings and Ruin (A Court of Thorns and Roses, #3);Maas, Sarah J.;4.46;5;read
+14;50659471;A Court of Frost and Starlight (A Court of Thorns and Roses, #3.5);Maas, Sarah J.;3.78;3;read
+15;10664113;A Dance with Dragons (A Song of Ice and Fire, #5);Martin, George R.R.;4.33;5;read
+16;100915;The Lion, the Witch and the Wardrobe (Chronicles of Narnia, #1);Lewis, C.S.;4.23;4;read
+17;136251;Harry Potter and the Deathly Hallows (Harry Potter, #7);Rowling, J.K.;4.62;5;read
+18;50659468;A Court of Mist and Fury (A Court of Thorns and Roses, #2);Maas, Sarah J.;4.64;5;read
+19;10964;Outlander (Outlander, #1);Gabaldon, Diana;4.26;;read
+20;21567845;Jakten på Kapten klänning;Trolle, Jonas;3.24;4;read
+21;77203;The Kite Runner;Hosseini, Khaled;4.34;5;read
+22;20588698;"Not That Kind of Girl: A Young Woman Tells You What She's ""Learned""";Dunham, Lena;3.28;2;read
+23;31682628;Hjärnstark;Hansen, Anders;3.95;3;read
+24;22041071;Omgiven av idioter;Erikson, Thomas;3.47;2;read
+25;34068938;Häxan (Patrik Hedström, #10);Läckberg, Camilla;3.93;3;read
+26;12236838;Änglamakerskan (Patrik Hedström, #8);Läckberg, Camilla;3.95;4;read
+27;6919979;Fyrvaktaren (Patrik Hedström, #7);Läckberg, Camilla;3.83;4;read
+28;25328976;The Drowning (Patrik Hedström, #6);Läckberg, Camilla;3.96;;read
+29;10868182;The Hidden Child (Patrik Hedström, #5);Läckberg, Camilla;4.00;;read
+30;1606783;Olycksfågeln (Patrik Hedström, #4);Läckberg, Camilla;3.81;4;read
+31;1457790;Stenhuggaren (Patrik Hedström, #3);Läckberg, Camilla;3.92;;read
+32;9606002;The Preacher (Patrik Hedström, #2);Läckberg, Camilla;3.82;;read
+33;7058405;The Ice Princess (Fjällbacka, #1);Läckberg, Camilla;3.75;;read
+34;2135342;Flickan och skulden: En bok om samhällets syn på våldtäkt;Wennstam, Katarina;4.30;;read
+35;6892870;The Girl Who Kicked the Hornet's Nest (Millennium, #3);Larsson, Stieg;4.23;;read
+36;2429135;The Girl with the Dragon Tattoo (Millennium, #1);Larsson, Stieg;4.16;;read
+37;1512204;Flickan som lekte med elden (Millenium, #2);Larsson, Stieg;4.25;;read
+38;110386;To Sir Phillip, With Love (Bridgertons, #5);Quinn, Julia;3.73;;read
+39;110384;Romancing Mister Bridgerton (Bridgertons, #4);Quinn, Julia;3.93;;read
+40;9408584;An Offer From a Gentleman (Bridgertons, #3);Quinn, Julia;3.94;;read
+41;861326;The Viscount Who Loved Me (Bridgertons, #2);Quinn, Julia;4.03;;read
+42;110391;The Duke and I (Bridgertons, #1);Quinn, Julia;3.81;;read
+43;7332;The Silmarillion;Tolkien, J.R.R.;4.00;;read
+44;61215384;The Return of the King (The Lord of the Rings, #3);Tolkien, J.R.R.;4.56;;read
+45;61215372;The Two Towers (The Lord of the Rings, #2);Tolkien, J.R.R.;4.48;;read
+46;61215351;The Fellowship of the Ring (The Lord of the Rings, #1);Tolkien, J.R.R.;4.39;;read
+47;5907;The Hobbit (The Lord of the Rings, #0);Tolkien, J.R.R.;4.28;;read
+48;34897;The Dragon Reborn (The Wheel of Time, #3);Jordan, Robert;4.27;;read
+49;233649;The Great Hunt (The Wheel of Time, #2);Jordan, Robert;4.26;;read
+50;228665;The Eye of the World (The Wheel of Time, #1);Jordan, Robert;4.19;;read
+51;1162543;Breaking Dawn (The Twilight Saga, #4);Meyer, Stephenie;3.73;;read
+52;428263;Eclipse (The Twilight Saga, #3);Meyer, Stephenie;3.72;;read
+53;49041;New Moon (The Twilight Saga, #2);Meyer, Stephenie;3.59;;read
+54;31706920;Life and Death: Twilight Reimagined;Meyer, Stephenie;3.51;;read
+55;41865;Twilight (The Twilight Saga, #1);Meyer, Stephenie;3.64;;read
+56;6692041;Mornings in Jenin;Abulhawa, Susan;4.44;;read
+57;11425649;Ikke uten min datter;Mahmoody, Betty;4.15;;read
+58;13497;A Feast for Crows (A Song of Ice and Fire, #4);Martin, George R.R.;4.16;;read
+59;62291;A Storm of Swords (A Song of Ice and Fire, #3);Martin, George R.R.;4.54;;read
+60;10572;A Clash of Kings  (A Song of Ice and Fire, #2);Martin, George R.R.;4.41;;read
+61;13496;A Game of Thrones (A Song of Ice and Fire, #1);Martin, George R.R.;4.44;;read
+62;2369772;Men tankene mine får du aldri;Asmervik, Sverre;4.19;5;read
+63;960;Angels & Demons (Robert Langdon, #1);Brown, Dan;3.94;;read
+64;968;The Da Vinci Code (Robert Langdon, #2);Brown, Dan;3.91;;read
+65;50659467;A Court of Thorns and Roses (A Court of Thorns and Roses, #1);Maas, Sarah J.;4.20;5;read
+66;57451659;Je m’appelle Agneta (Agneta, #1);Hamberg, Emma;3.75;;read
+67;1;Harry Potter and the Half-Blood Prince (Harry Potter #6);Rowling, J.K.;4.58;;read
+68;6;Harry Potter and the Goblet of Fire (Harry Potter, #4);Rowling, J.K.;4.56;;read
+69;2;Harry Potter and the Order of the Phoenix (Harry Potter, #5);Rowling, J.K.;4.50;;read
+70;5;Harry Potter and the Prisoner of Azkaban (Harry Potter, #3);Rowling, J.K.;4.58;;read
+71;15881;Harry Potter and the Chamber of Secrets (Harry Potter, #2);Rowling, J.K.;4.43;;read
+72;18966806;Morning Star (Red Rising Saga, #3);Brown, Pierce;4.50;4;read
+73;18966819;Golden Son (Red Rising Saga, #2);Brown, Pierce;4.45;5;read
+74;15839976;Red Rising (Red Rising Saga, #1);Brown, Pierce;4.26;5;read
+75;72193;Harry Potter and the Philosopher’s Stone (Harry Potter, #1);Rowling, J.K.;4.47;;read
+76;13623848;The Song of Achilles;Miller, Madeline;4.34;;to-read
+77;61198133;The Stolen Heir (The Stolen Heir Duology, #1);Black, Holly;4.03;;to-read
+78;58545703;Hooked (Never After, #1);McIntire, Emily;3.83;;to-read
+79;127823371;All This Twisted Glory (This Woven Kingdom, #3);Mafi, Tahereh;4.46;;to-read
+80;61085925;These Infinite Threads (This Woven Kingdom, #2);Mafi, Tahereh;4.14;;to-read
+81;43514655;Reveal Me (Shatter Me, #5.5);Mafi, Tahereh;3.98;;to-read
+82;40863452;Shadow Me (Shatter Me, #4.5);Mafi, Tahereh;4.02;;to-read
+83;58517502;Believe Me (Shatter Me, #6.5);Mafi, Tahereh;4.18;;to-read
+84;17331518;Fracture Me (Shatter Me, #2.5);Mafi, Tahereh;3.38;;to-read
+85;44054122;Imagine Me (Shatter Me, #6);Mafi, Tahereh;3.99;;to-read
+86;34992959;Defy Me (Shatter Me, #5);Mafi, Tahereh;4.29;;to-read
+87;13623150;Destroy Me (Shatter Me, #1.5);Mafi, Tahereh;4.03;;to-read
+88;34992929;Restore Me (Shatter Me, #4);Mafi, Tahereh;4.17;;to-read
+89;13188676;Ignite Me (Shatter Me, #3);Mafi, Tahereh;4.47;;to-read
+90;13104080;Unravel Me (Shatter Me, #2);Mafi, Tahereh;4.16;;to-read
+91;10429045;Shatter Me (Shatter Me, #1);Mafi, Tahereh;3.87;;to-read
+92;62816044;A Curse for True Love (Once Upon a Broken Heart, #3);Garber, Stephanie;4.18;;to-read
+93;56554281;This Woven Kingdom (This Woven Kingdom, #1);Mafi, Tahereh;4.00;;to-read
+94;59918505;The Never King (Vicious Lost Boys, #1);Crowe, Nikki St.;3.72;;to-read
+95;58340706;One Dark Window (The Shepherd King, #1);Gillig, Rachel;4.34;;to-read
+96;59808071;The Ballad of Never After (Once Upon a Broken Heart, #2);Garber, Stephanie;4.56;;to-read
+97;57191885;The Witch Collector (Witch Walker, #1);Weaks, Charissa;3.88;;to-read
+98;22328546;Red Queen (Red Queen, #1);Aveyard, Victoria;4.01;;to-read
+99;35796008;Dance of Thieves (Dance of Thieves, #1);Pearson, Mary E.;4.17;;to-read
+100;59339681;What Lies Beyond the Veil (Of Flesh & Bone, #1);Woods, Harper L.;3.66;;to-read
+101;26032912;The Queen of Nothing (The Folk of the Air, #3);Black, Holly;4.37;;to-read
+102;26032887;The Wicked King (The Folk of the Air, #2);Black, Holly;4.32;;to-read
+103;40132775;House of Sky and Breath (Crescent City, #2);Maas, Sarah J.;4.51;;to-read
+104;49826643;Daughter of No Worlds (The War of Lost Hearts, #1);Broadbent, Carissa;4.08;;to-read
+105;52735921;Kingdom of the Wicked (Kingdom of the Wicked, #1);Maniscalco, Kerri;3.91;;to-read
+106;40024139;Serpent & Dove (Serpent & Dove, #1);Mahurin, Shelby;4.00;;to-read
+107;44778083;House of Earth and Blood (Crescent City, #1);Maas, Sarah J.;4.48;;to-read
+108;55215339;A Touch of Darkness (Hades x Persephone Saga, #1);St. Clair, Scarlett;3.83;;to-read
+109;62335396;The Ashes and the Star-Cursed King (Crowns of Nyaxia, #2);Broadbent, Carissa;4.20;;to-read
+110;60784546;Divine Rivals (Letters of Enchantment, #1);Ross, Rebecca;4.26;;to-read
+111;60714999;The Serpent and the Wings of Night (Crowns of Nyaxia, #1);Broadbent, Carissa;4.37;;to-read
+112;42070091;Crochet and Cauldrons (Vampire Knitting Club, #3);Warren, Nancy;4.10;;to-read
+113;42073781;Stitches and Witches (Vampire Knitting Club, #2);Warren, Nancy;4.05;;to-read
+114;41882197;The Vampire Knitting Club (Vampire Knitting Club, #1);Warren, Nancy;3.94;;to-read
+115;61246394;Trial of the Sun Queen (Artefacts of Ouranos, #1);Tuli, Nisha J;3.92;;to-read
+116;58483167;Untitled (Blood and Ash, #7);Armentrout, Jennifer L.;4.00;;to-read
+117;58483123;The Primal of Blood and Bone (Blood and Ash, #6);Armentrout, Jennifer L.;4.20;;to-read
+118;63844859;Visions of Flesh and Blood: A Blood and Ash/Flesh and Fire Compendium (Blood and Ash, #5.5);Armentrout, Jennifer L.;4.19;;to-read
+119;63847274;A Soul of Ash and Blood (Blood and Ash, #5);Armentrout, Jennifer L.;3.99;;to-read
+120;57815107;The War of Two Queens (Blood and Ash, #4);Armentrout, Jennifer L.;4.08;;to-read
+121;55240343;The ​Crown of Gilded Bones (Blood and Ash, #3);Armentrout, Jennifer L.;4.20;;to-read
+122;54319549;A Kingdom of Flesh and Fire (Blood and Ash, #2);Armentrout, Jennifer L.;4.38;;to-read
+123;62012464;La perla rossa (Blood and Ash, #1.5);Armentrout, Jennifer L.;4.22;;to-read
+124;52831200;From Blood and Ash (Blood and Ash, #1);Armentrout, Jennifer L.;4.25;;to-read
+125;76714487;Tower of Dawn (Throne of Glass, #6);Maas, Sarah J.;4.27;;to-read
+126;76713323;Empire of Storms (Throne of Glass, #5);Maas, Sarah J.;4.60;;to-read
+127;76707900;Queen of Shadows (Throne of Glass, #4);Maas, Sarah J.;4.58;;to-read
+128;76706470;Heir of Fire (Throne of Glass, #3);Maas, Sarah J.;4.46;;to-read
+129;76705490;Crown of Midnight (Throne of Glass, #2);Maas, Sarah J.;4.35;;to-read
+130;25744928;Deep Work: Rules for Focused Success in a Distracted World;Newport, Cal;4.19;;to-read
+131;15843166;You Are a Badass;Sincero, Jen;3.95;;to-read
+132;6596;The Four Agreements;Ruiz, Miguel;4.18;;to-read
+133;18144590;The Alchemist;Coelho, Paulo;3.90;;to-read
+134;22628;The Perks of Being a Wallflower;Chbosky, Stephen;4.23;;to-read
+135;57699848;Go Tell the Bees That I Am Gone (Outlander, #9);Gabaldon, Diana;4.45;;to-read
+136;11710373;Written in My Own Heart's Blood (Outlander, #8);Gabaldon, Diana;4.55;;to-read
+137;21418017;The Space Between (Outlander, #7.5);Gabaldon, Diana;4.25;;to-read
+138;2832909;An Echo in the Bone (Outlander, #7);Gabaldon, Diana;4.44;;to-read
+139;10965;A Breath of Snow and Ashes (Outlander, #6);Gabaldon, Diana;4.44;;to-read
+140;10967;The Fiery Cross (Outlander, #5);Gabaldon, Diana;4.25;;to-read
+141;40909452;Drums of Autumn (Outlander, #4);Gabaldon, Diana;4.35;;to-read
+142;10987;Voyager (Outlander, #3);Gabaldon, Diana;4.39;;to-read
+143;5364;Dragonfly in Amber (Outlander, #2);Gabaldon, Diana;4.34;;to-read
+144;57945316;Babel;Kuang, R.F.;4.23;;to-read
+145;7743175;A Memory of Light (The Wheel of Time, #14);Jordan, Robert;4.56;;to-read
+146;8253920;Towers of Midnight (The Wheel of Time, #13);Jordan, Robert;4.47;;to-read
+147;1166599;The Gathering Storm (The Wheel of Time, #12);Jordan, Robert;4.42;;to-read
+148;13888;Knife of Dreams (The Wheel of Time, #11);Jordan, Robert;4.19;;to-read
+149;113435;Crossroads of Twilight (The Wheel of Time, #10);Jordan, Robert;3.79;;to-read
+150;13891;Winter's Heart (The Wheel of Time, #9);Jordan, Robert;3.96;;to-read
+151;2486401;Snow: The Prologue to Winter's Heart (Wheel of Time, part of #9);Jordan, Robert;4.13;;to-read
+152;140974;The Path of Daggers (The Wheel of Time, #8);Jordan, Robert;3.93;;to-read
+153;13890;A Crown of Swords (The Wheel of Time, #7);Jordan, Robert;4.06;;to-read
+154;35231;Lord of Chaos (The Wheel of Time, #6);Jordan, Robert;4.18;;to-read
+155;13895;The Fires of Heaven (The Wheel of Time, #5);Jordan, Robert;4.19;;to-read
+156;9539;The Shadow Rising (The Wheel of Time, #4);Jordan, Robert;4.27;;to-read
+157;12111823;The Winds of Winter (A Song of Ice and Fire, #6);Martin, George R.R.;4.40;;to-read
