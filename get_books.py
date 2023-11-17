@@ -2,7 +2,6 @@ import requests
 import pandas as pd
 import re
 from bs4 import BeautifulSoup
-from concurrent.futures import ThreadPoolExecutor
 
 def set_url(user_id):
     # Base-urls for the bookshelf to-read and read
