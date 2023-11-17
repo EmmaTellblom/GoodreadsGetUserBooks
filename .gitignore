@@ -1,3 +1,4 @@
 # files to ignore
 config.py
 __pycache__/
+*.csv
