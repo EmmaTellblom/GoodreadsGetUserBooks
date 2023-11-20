@@ -24,4 +24,21 @@ def create_combined_list(books_have_read, books_to_read):
     return books_all_shelves
 
 def save_to_csv(book_data):
-    book_data.to_csv('goodreads_python_export.csv', encoding='utf-8', sep=';', index=False)
+    # Add columns to make sure they match goodreads export
+    columns_to_ensure = ['Author_l-f', 'Additional_Authors', 'ISBN', 'ISBN13', 'Publisher', 'Binding', 'Year_Published', 'Original_Publication_Year', 'Date_Read', 'Date_Added', 'Bookshelves', 'Bookshelves_with_positions', 'My_Review', 'Spoiler', 'Private_Notes', 'Read_Count', 'Owned_Copies']
+    for col in columns_to_ensure:
+        if col not in book_data.columns:
+            book_data[col] = np.nan
+
+    # Arrange columns in the desired order
+    desired_order = ['Book_Id', 'Book_Title', 'Author', 'Author_l-f', 'Additional_Authors', 'ISBN', 'ISBN13',
+                     'My_Rating', 'Average_Rating', 'Publisher', 'Binding', 'Number_of_Pages', 'Year_Published',
+                     'Original_Publication_Year', 'Date_Read', 'Date_Added', 'Bookshelves',
+                     'Bookshelves_with_positions', 'Exclusive_Shelf', 'My_Review', 'Spoiler', 'Private_Notes',
+                     'Read_Count', 'Owned_Copies', 'Genres']
+
+    # Reorder columns
+    ordered_book_data = book_data[desired_order]
+
+    # Save to CSV
+    ordered_book_data.to_csv('goodreads_python_export.csv', encoding='utf-8', sep=',', index=False)

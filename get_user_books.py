@@ -36,7 +36,7 @@ def get_no_of_pages(book_url): # Get number of pages needed to paginate through
     return number_of_pages # No of pages to paginate
 
 def get_user_book_info(book_url, number_of_pages):
-    books = pd.DataFrame(columns=['Book_Id', 'Book_Title', 'Author', 'Average_Rating', 'My_Rating'])
+    books = pd.DataFrame(columns=['Book_Id', 'Book_Title', 'Author','Author_l-f', 'Additional_Authors', 'ISBN', 'ISBN13', 'My_Rating', 'Average_Rating', 'Publisher', 'Binding', 'Number_of_Pages', 'Year_Published', 'Original_Publication_Year', 'Date_Read', 'Date_Added', 'Bookshelves', 'Bookshelves_with_positions', 'Exclusive_Shelf', 'My_Review', 'Spoiler', 'Private_Notes', 'Read_Count', 'Owned_Copies', 'Genres'])
     dataframes = []
     for i in range(1,number_of_pages+1):
         book_url_pages = book_url + f'&page={i}' # Create pagination URL
@@ -48,7 +48,8 @@ def get_user_book_info(book_url, number_of_pages):
             info = {
                 'Book_Id': link['href'].split('/')[-1].split('-')[0].split('.')[0],
                 'Book_Title': link.get('title'),
-                'Author': link.find_next('td', class_='field author').find('a').text.strip(),
+                'Author': link.find_next('td', class_='field author').find('a').text.strip().replace('"', ''),
+                #'Author': link.find_next('td', class_='field author').find('a').text.strip(),
                 'Average_Rating': link.find_next('td', class_='field avg_rating').find('div', class_='value').text.strip(),
             }
             # Check if 'user_rating' element is present
@@ -65,7 +66,7 @@ def get_user_book_info(book_url, number_of_pages):
 
     # Concatenate all DataFrames in the list
     books = pd.concat(dataframes, ignore_index=True)
-
+    print('I have collected user books')
     # Drop rows with None values in the 'title' column becuse of duplicates
     books = books.dropna(subset=['Book_Title'])   
     books = books.reset_index(drop=True)
