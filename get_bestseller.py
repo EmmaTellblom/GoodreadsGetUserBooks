@@ -1,8 +1,5 @@
 from config import NYT_KEY
 import requests
-import pandas as pd
-from get_generic_book import fetch_book_data_from_isbn13
-from format_data import save_to_csv, save_to_csv_as_is
 
 # Set the parameters to get books from New York Times Best Seller List
 def set_parameters(): 

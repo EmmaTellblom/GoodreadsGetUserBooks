@@ -2,8 +2,8 @@ import requests
 import pandas as pd
 from bs4 import BeautifulSoup
 from concurrent.futures import ThreadPoolExecutor
-from urllib.parse import urlparse, parse_qs
-import re
+from urllib.parse import urlparse
+import json
 
 #####################################################
 ## This file is to get book-data from the          ##
@@ -54,7 +54,7 @@ def get_generic_book_data(booklist): # Initiate the fetching of book-data
 
 # This function is used for getting Goodreads book data from the ISBN13 gotten from NYT API
 def fetch_book_data_from_isbn13(book_list):
-    book_df = pd.DataFrame(columns=['Book_Id', 'Book_Title', 'Author', 'Year_Published', 'Exclusive_Shelf', 'Number_of_Pages', 'Genres'])
+    book_df = pd.DataFrame(columns=['Book_Id', 'Book_Title', 'Author', 'Year_Published', 'Exclusive_Shelf', 'Average_Rating','Number_of_Pages', 'Genres'])
     base_url = 'https://www.goodreads.com/search?q='
     for b in book_list:
         isbn13_url = f'{base_url}{b[0]}' # ISBN from the booklist
@@ -84,10 +84,18 @@ def fetch_book_data_from_isbn13(book_list):
             number_of_pages = int(pages_text.split()[0])
         except (ValueError, IndexError):
             number_of_pages = None
+
         # Join genres into a comma-separated string
         genres_string = ', '.join(book_genres)
+        # Get average rating from the json-string, expand to other variables later
+        script_tag = soup.find('script', {'type': 'application/ld+json'})
+        json_data = script_tag.string
+        book_data = json.loads(json_data)
+        average_rating = book_data['aggregateRating']['ratingValue']
+
+        # Save to DF
         book_df.loc[len(book_df)] = {'Book_Id': book_id, 'Book_Title': b[1],'Author': b[2], 'Year_Published': year_published, 
-                                     'Exclusive_Shelf': 'best-seller', 'Number_of_Pages': number_of_pages, 
+                                     'Exclusive_Shelf': 'best-seller', 'Average_Rating': average_rating,'Number_of_Pages': number_of_pages, 
                                      'Genres': genres_string}
 
     return book_df

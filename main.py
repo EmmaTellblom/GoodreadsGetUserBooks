@@ -1,7 +1,7 @@
 from get_user_books import set_url
 from format_data import create_combined_list, format_ratings, save_to_csv, combine_bestseller_total
-from get_generic_book import get_generic_book_data
-from get_bestseller import set_parameters, get_books, fetch_book_data_from_isbn13
+from get_generic_book import get_generic_book_data, fetch_book_data_from_isbn13
+from get_bestseller import set_parameters, get_books
 from config import USER_ID
 
 # Set this to True if we are to collect NYT Best sellers top 100
