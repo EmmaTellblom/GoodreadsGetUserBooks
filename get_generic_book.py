@@ -58,9 +58,9 @@ def fetch_book_data_from_isbn13(book_list):
     base_url = 'https://www.goodreads.com/search?q='
     for b in book_list:
         isbn13_url = f'{base_url}{b[0]}' # ISBN from the booklist
+        print(isbn13_url)
         page = requests.get(isbn13_url)
         soup = BeautifulSoup(page.content, 'html.parser')
-
         # Get the book_id
         final_url = page.url # Redirected url
         parsed_url = urlparse(final_url)
