@@ -51,7 +51,7 @@ def save_to_csv(book_data):
     ordered_book_data = book_data[desired_order]
 
     # Save to CSV
-    ordered_book_data.to_csv('goodreads_python_export.csv', encoding='utf-8', sep=',', index=False)
+    ordered_book_data.to_csv('goodreads_export_with_genres.csv', encoding='utf-8', sep=',', index=False)
 
 def save_to_csv_as_is(booklist):
     booklist = pd.DataFrame(booklist)
