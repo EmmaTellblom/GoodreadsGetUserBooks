@@ -1,9 +1,11 @@
 import requests
-import pandas as pd
 from bs4 import BeautifulSoup
 from concurrent.futures import ThreadPoolExecutor
 from urllib.parse import urlparse
 import json
+
+# This add data such as number of pages and published year and
+# genres to a book.
 
 #####################################################
 ## This file is to get book-data from the          ##
@@ -11,10 +13,21 @@ import json
 ## is collected in file get_user_books.py          ##
 #####################################################
 
+def fetch_book_data(book): 
+    """
+    Fetches book data for a given book ID.
 
-def fetch_book_data(book_id): 
+    Parameters:
+        book_id (str): The ID of the book to fetch data for.
+
+    Returns:
+        dict: A dictionary containing the following book data:
+            - 'Number_of_Pages': The number of pages in the book.
+            - 'Year_Published': The year the book was published.
+            - 'Genres': A comma-separated string of genres associated with the book.
+    """
     base_url = 'https://www.goodreads.com/book/show/'
-    book_url = f'{base_url}{book_id}'
+    book_url = f'{base_url}{book.get_book_id()}'
     page = requests.get(book_url)
     soup = BeautifulSoup(page.content, 'html.parser')
     
@@ -39,29 +52,30 @@ def fetch_book_data(book_id):
 
     # Join genres into a comma-separated string
     genres_string = ', '.join(book_genres)
+    book.set_pages(number_of_pages)
+    book.set_year(year_published)
+    book.set_genres(genres_string)
 
-    return {'Number_of_Pages': number_of_pages, 'Year_Published': year_published, 'Genres': genres_string}
-
-def get_generic_book_data(booklist): # Initiate the fetching of book-data
-    book_ids = booklist['Book_Id'].tolist()
+# TODO: Fix for object instead ?
+def get_generic_book_data(all_books): # Initiate the fetching of book-data
     with ThreadPoolExecutor(max_workers=8) as executor: 
-        results = list(executor.map(fetch_book_data, book_ids))
-
-    additional_info = pd.DataFrame(results)
-    booklist = pd.concat([booklist, additional_info], axis=1)
-
-    return booklist
+        list(executor.map(fetch_book_data, all_books))
+    return all_books
 
 # This function is used for getting Goodreads book data from the ISBN13 gotten from NYT API
 def fetch_book_data_from_isbn13(book_list):
-    book_df = pd.DataFrame(columns=['Book_Id', 'Book_Title', 'Author', 'Year_Published', 'Exclusive_Shelf', 'Average_Rating','Number_of_Pages', 'Genres'])
+    """
+    Fetches book data from Goodreads using a list of book ISBN-13s.
+
+    :param book_list: A list of Book objects containing ISBN-13s.
+    :return: The updated list of Book objects with additional data fetched from Goodreads.
+    """
     base_url = 'https://www.goodreads.com/search?q='
+
     for b in book_list:
-        isbn13_url = f'{base_url}{b[0]}' # ISBN from the booklist
-        print(isbn13_url)
+        isbn13_url = f'{base_url}{b.get_isbn()}' # ISBN from the booklist
         page = requests.get(isbn13_url)
         soup = BeautifulSoup(page.content, 'html.parser')
-        # Get the book_id
         final_url = page.url # Redirected url
         parsed_url = urlparse(final_url)
         path_segments = parsed_url.path.split('/')
@@ -93,9 +107,11 @@ def fetch_book_data_from_isbn13(book_list):
         book_data = json.loads(json_data)
         average_rating = book_data['aggregateRating']['ratingValue']
 
-        # Save to DF
-        book_df.loc[len(book_df)] = {'Book_Id': book_id, 'Book_Title': b[1],'Author': b[2], 'Year_Published': year_published, 
-                                     'Exclusive_Shelf': 'best-seller', 'Average_Rating': average_rating,'Number_of_Pages': number_of_pages, 
-                                     'Genres': genres_string}
+        # Set book data
+        b.set_book_id(book_id)
+        b.set_pages(number_of_pages)
+        b.set_year(year_published)
+        b.set_genres(genres_string)
+        b.set_avg_rating(average_rating)
 
-    return book_df
+    return book_list
