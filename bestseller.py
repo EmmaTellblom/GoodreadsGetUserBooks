@@ -29,8 +29,8 @@ def retrieve_best_sellers(api_url):
         data = response.json()
         for document in data['results']['books']:
             book = Book(
-                title = document.get('title').title(),
-                author = document.get('author'),
+                #title = document.get('title').title(),
+                #author = document.get('author'),
                 isbn = document.get('primary_isbn13'),
                 bookshelf = 'best-seller'
             )

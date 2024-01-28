@@ -8,6 +8,8 @@ from book import Book
 ## This file is to get books from user bookshelf ##
 ## bookshelf. Generic book-data from Book_Id     ##
 ## is collected in the file get_generic_book.py  ##
+## This is needed because user bookshelf is not  ##
+## the same as generic book-page in Goodreads    ##
 ###################################################
 
 def set_url_params(user_id, bookshelf):
@@ -44,6 +46,7 @@ def get_no_of_paginations(book_url): # Get number of pages needed to paginate th
 	:type book_url: str
 	:return: The number of pages needed to paginate through.
 	"""
+    number_of_books = 0
     page = requests.get(book_url)
     soup = BeautifulSoup(page.content, 'html.parser')
     no_books = soup.find('title')
@@ -78,10 +81,7 @@ def get_user_book_info(book_url, number_of_pages):
         for link in book_links:
             book_id_match = re.search(r'/book/show/(\d+)', link.find('a', href=True)['href'])
             book = Book(
-                book_id = book_id_match.group(1),
-                title = link.find('td', class_='field title').find('a').get('title'),
-                author = link.find('td', class_='field author').find('a').text.strip().replace('"', ''),
-                avg_rating = link.find('td', class_='field avg_rating').find('div', class_='value').text.strip()
+                book_id = book_id_match.group(1)
             )
             static_stars_element = link.find_next('td', class_='field rating').find('span', class_='staticStars')
             if static_stars_element:

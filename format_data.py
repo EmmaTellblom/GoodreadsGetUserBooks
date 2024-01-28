@@ -15,25 +15,27 @@ def format_ratings(book_data):
         book.set_user_rating(np.select(conditions, choices, default=''))
     return book_data
 
-def create_combined_list(books_read, books_to_read): 
-    for b in books_to_read:
-        b.set_bookshelf('to-read')
-    for b in books_read:
-        b.set_bookshelf('read')
-    books_all_shelves = books_read + books_to_read
-    return books_all_shelves
+def combine_unqiue_list(all_books, new_list):
+    """
+    Combine unique books from two lists and return the combined list.
 
-def combine_bestseller_total(booklist, bestseller):
+    Args:
+        all_books (list): A list of all books.
+        new_list (list): A new list of books to be combined.
+
+    Returns:
+        list: A combined list of unique books from all_books and new_list.
+    """
     unique_book_ids = set()
 
-    for book in booklist:
+    for book in all_books:
         unique_book_ids.add(book.get_book_id())
 
     # Iterate through bestseller and add unique books to the list
-    unique_bestseller = [best for best in bestseller if best.get_book_id() not in unique_book_ids]
+    unique_new_list = [best for best in new_list if best.get_book_id() not in unique_book_ids]
 
     # Combine the list
-    books_all_shelves = booklist + unique_bestseller
+    books_all_shelves = all_books + unique_new_list
     return books_all_shelves
 
 def save_to_csv(book_list):

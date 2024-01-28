@@ -1,6 +1,6 @@
 class Book:
         
-    def __init__(self, title, author, isbn = '', book_id = '',  year='', pages='', genres='', bookshelf='', user_rating = '', avg_rating = ''):
+    def __init__(self, title = '', author = '', isbn = '', book_id = '',  year='', pages='', genres='', bookshelf='', user_rating = '', avg_rating = '', description=''):
         """
         Initializes a new instance of the Book class.
 
@@ -26,6 +26,7 @@ class Book:
         self.bookshelf = bookshelf
         self.user_rating = user_rating
         self.avg_rating = avg_rating
+        self.description = description
 
     def get_book_id(self) -> int:
         """Returns The ID of the book."""
@@ -64,6 +65,10 @@ class Book:
     def get_avg_rating(self) -> float:
         """Return The average rating of the book."""
         return self.avg_rating
+    
+    def get_description(self) -> str:
+        """Return The description of the book."""
+        return self.description
 
     def set_pages(self, pages):
         """
@@ -148,3 +153,65 @@ class Book:
             None
         """
         self.avg_rating = avg_rating
+
+    def set_description(self, description):
+        """
+        Set the description of the book.
+
+        Parameters:
+            description (str): The description of the book.
+
+        Returns:
+            None
+        """
+        self.description = description
+    
+    def set_author(self, author):
+        """
+        Set the author of the book.
+
+        Parameters:
+            author (str): The author of the book.
+
+        Returns:
+            None
+        """
+        self.author = author
+
+    def set_title(self, title):
+        """
+        Set the title of the book.
+
+        Parameters:
+            title (str): The title of the book.
+
+        Returns:
+            None
+        """
+        self.title = title
+    
+    def set_isbn(self, isbn):
+        """
+        Set the ISBN of the book.
+
+        Parameters:
+            isbn (int): The ISBN of the book.
+
+        Returns:
+            None
+        """
+        self.isbn = isbn
+
+    def __str__(self):
+        return f"""
+        Title: {self.title}
+        ISBN: {self.isbn}
+        Author: {self.author}
+        Year: {self.year}
+        Pages: {self.pages}
+        Genres: {self.genres}
+        Bookshelf: {self.bookshelf}
+        User Rating: {self.user_rating}
+        Avg Rating: {self.avg_rating}
+        Description: {self.description}
+        """
